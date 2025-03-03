@@ -30,4 +30,4 @@ This project is a web application designed for learning and testing knowledge in
 
 1. Clone the repository:
    ```bash
-   git clone [Your repository URL]
+   git clone https://github.com/Valerij2000/bizinformatika.git
