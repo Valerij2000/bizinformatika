@@ -1,4 +1,3 @@
-**File: /Users/valerijsumkov/Web/University/bizinformatika/README.md**
 ```markdown
 # Бизинформатика
 
