@@ -1,85 +1,33 @@
+# Business Informatics
 
-```markdown
-# Бизинформатика
+An interactive educational project on business informatics.
 
-Интерактивный образовательный проект по бизнес-информатике.
+## Description
 
-## Описание
+This project is a web application designed for learning and testing knowledge in the field of business informatics. The application includes interactive patient scenarios, questions and answers, and audio accompaniment to enhance the user experience.
 
-Этот проект представляет собой веб-приложение, разработанное для обучения и тестирования знаний в области бизнес-информатики. Приложение включает в себя интерактивные сценарии с пациентами, вопросы и ответы, а также звуковое сопровождение для улучшения пользовательского опыта.
-
-## Технологии
+## Technologies
 
 - HTML5
 - CSS3 (SCSS)
 - JavaScript (ES6+)
-- Vite (сборка проекта)
-- Micromodal.js (для модальных окон)
+- Vite (project bundler)
+- Micromodal.js (for modal windows)
 
-## Структура проекта
+## Project Structure
 
-- `src/` - исходный код
-  - `js/` - JavaScript файлы
-  - `scss/` - SCSS стили
-  - `fonts/` - шрифты
-- `public/` - статические файлы
-  - `img/` - изображения
-  - `sounds/` - звуковые файлы
-  - `docs/` - документация
-- `docs/` - собранный проект (для GitHub Pages)
+- `src/` - source code
+  - `js/` - JavaScript files
+  - `scss/` - SCSS styles
+  - `fonts/` - font files
+- `public/` - static files
+  - `img/` - images
+  - `sounds/` - audio files
+  - `docs/` - documentation
+- `docs/` - built project (for GitHub Pages)
 
-## Установка и запуск
+## Installation and Running
 
-1. Клонируйте репозиторий:
-   ```
-   git clone [URL вашего репозитория]
-   ```
-
-2. Установите зависимости:
-   ```
-   npm install
-   ```
-
-3. Запустите проект в режиме разработки:
-   ```
-   npm run dev
-   ```
-
-4. Для сборки проекта выполните:
-   ```
-   npm run build
-   ```
-
-## Скрипты
-
-- `npm run dev` - запуск сервера разработки
-- `npm run build` - сборка проекта
-- `npm run preview` - предварительный просмотр собранного проекта
-- `npm run clear` - очистка директории `docs/`
-
-## Браузерная поддержка
-
-Проект настроен для поддержки 99.5% браузеров.
-
-## Зависимости
-
-### Основные:
-- micromodal: ^0.4.10
-- resize-observer-polyfill: ^1.5.1
-
-### Разработка:
-- vite: ^4.4.5
-- sass: ^1.68.0
-- autoprefixer: ^10.4.4
-- и другие (см. package.json)
-
-## Лицензия
-
-[Укажите вашу лицензию, если применимо]
-
-## Контакты
-
-[Ваша контактная информация или информация о команде разработчиков]
-```
-
-Этот README.md файл предоставляет основную информацию о вашем проекте, включая его описание, используемые технологии, структуру проекта, инструкции по установке и запуску, а также информацию о зависимостях. Вы можете дополнить или изменить его в соответствии с вашими конкретными потребностями и дополнительной информацией о проекте.
+1. Clone the repository:
+   ```bash
+   git clone [Your repository URL]
