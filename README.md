@@ -29,5 +29,17 @@ This project is a web application designed for learning and testing knowledge in
 ## Installation and Running
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/Valerij2000/bizinformatika.git
+  ```bash
+  git clone https://github.com/Valerij2000/bizinformatika.git
+
+## Scripts
+
+- Install dependencies:
+  ```bash
+  npm install
+- Run the project in development mode
+  ```bash
+  npm run dev
+- Run the project in development mode
+  ```bash
+  npm run build
