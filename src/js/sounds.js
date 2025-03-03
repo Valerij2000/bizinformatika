@@ -1,20 +1,20 @@
-const main = new Audio('../sounds/maintheme.mp3');
+const main = new Audio('./sounds/maintheme.mp3');
 main.volume = 0.2;
 main.load();
 
-const button = new Audio('../sounds/button.mp3');
+const button = new Audio('./sounds/button.mp3');
 button.volume = .8;
 button.load();
 
-const correct = new Audio('../sounds/correct.mp3');
+const correct = new Audio('./sounds/correct.mp3');
 correct.volume = .6;
 correct.load();
 
-const incorrect = new Audio('../sounds/incorrect.mp3');
+const incorrect = new Audio('./sounds/incorrect.mp3');
 incorrect.volume = .8;
 incorrect.load();
 
-const win = new Audio('../sounds/win.mp3');
+const win = new Audio('./sounds/win.mp3');
 win.volume = 0.8;
 win.load();
 
