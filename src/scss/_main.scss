@@ -6,15 +6,17 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
+
   color: white;
-  
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  
+
   @media (orientation: portrait) {
     background-image: url('../img/mobile@2x.jpg');
+    background-position: 0% 75%;
+    background-size: 103%;
   }
 }
 

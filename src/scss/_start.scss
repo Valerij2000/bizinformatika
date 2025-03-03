@@ -12,8 +12,14 @@
   position: relative;
 
   &::before {
-    content: "";
+    content: "Войти-в-IT";
     position: absolute;
+    font-family: "Pixeloid",
+      serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2vmin;
     top: -6vmin;
     left: -9vmin;
     width: 24vmin;
@@ -84,9 +90,13 @@
 
   &__text {
     font-family: "Roboto", "Arial", sans-serif;
-    font-size: 2.3vmin;
+    font-size: 2.5vmin;
     line-height: 145%;
     max-width: 80vmin;
+
+    @include respond(mobile) {
+      font-size: 3.5vmin;
+    }
   }
 
   &__btn {
@@ -167,6 +177,20 @@
     gap: 1vmax;
     align-items: center;
 
+    a {
+      font-family: "Pixeloid",
+        serif;
+      font-size: 3vmax;
+    }
+
+    p {
+      font-size: 1.3vmax;
+
+      @include respond(mobile) {
+        font-size: 2vmax;
+      }
+    }
+
     @media (orientation: portrait) {
       width: 100%;
     }
@@ -208,6 +232,6 @@
   }
 
   100% {
-    transform: translateY(0);  
+    transform: translateY(0);
   }
 }
