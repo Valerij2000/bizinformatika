@@ -1,8 +1,8 @@
-import mainthemeUrl from '/sounds/maintheme.mp3';
-import buttonUrl from '/sounds/button.mp3';
-import correctUrl from '/sounds/correct.mp3';
-import incorrectUrl from '/sounds/incorrect.mp3';
-import winUrl from '/sounds/win.mp3';
+import mainthemeUrl from '../sounds/maintheme.mp3';
+import buttonUrl from '../sounds/button.mp3';
+import correctUrl from '../sounds/correct.mp3';
+import incorrectUrl from '../sounds/incorrect.mp3';
+import winUrl from '../sounds/win.mp3';
 
 const main = new Audio(mainthemeUrl);
 main.volume = 0.2;
