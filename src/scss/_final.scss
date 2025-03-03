@@ -1,0 +1,63 @@
+.final {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Helvetica", "Arial", sans-serif;
+  text-align: center;
+
+  @media (orientation: portrait) {
+    margin-top: calc((100vh - 100vw)/4);
+  }
+  
+  &__img {
+    width: 30vmin;
+
+    @media (orientation: portrait) {
+      width: 50vmin;
+    }
+  }  
+
+  &__header {
+    margin: 3vmin 0;
+
+    @media (orientation: portrait) {
+      margin: 8vmin 0 6vmin;
+      font-size: 8vmin;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 2vmin;
+
+    p {
+      font-family: "Roboto", "Arial", sans-serif;
+      font-size: 2.3vmin;
+      line-height: 145%;
+      max-width: 82vmin;
+
+      @media (orientation: portrait) {
+        max-width: 90vmin;
+        font-size: 3.5vmin;
+      }
+    }
+  }
+
+  &__btns {
+    margin-top: 3vmin;
+    display: flex;
+    gap: 2vmin;
+
+    @media (orientation: landscape) {
+      flex-wrap: nowrap;   
+    }
+      
+    @media (orientation: portrait) {
+      margin-top: 5vmin;
+      flex-wrap: wrap;
+    }
+  }
+}

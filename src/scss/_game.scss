@@ -1,0 +1,282 @@
+.game {
+
+  &__header {
+    position: relative;
+  }
+
+  &__sound {
+    position: absolute;
+    top: 0;
+    left: -4vmin;
+    width: 6vmin;
+    height: 100%;
+
+    background-image: url('../img/sound-on.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    &.muted {
+      background-image: url('../img/sound-off.svg') !important;
+    }
+
+    @media (max-aspect-ratio: 8/5) {
+      top: -9vmin;
+    }
+
+    @media (orientation: portrait) {
+      top: -9vmin;
+      left: 0;
+      width: 7vmin;
+      height: 7vmin;
+    }
+  }
+
+  &__progressbar {
+    position: absolute;
+    top: 0;
+    right: -4vmin;
+    width: 28vmin;
+    height: 100%;
+
+    svg {
+      max-width: 100%;
+    }
+
+    // background-image: url('./img/progress-bar.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+    @media (max-aspect-ratio: 8/5) {
+      top: -9vmin;
+    }
+
+    @media (orientation: portrait) {
+      width: 30vmin;
+      height: 5vmin;
+      top: -7vmin;
+      right: 0;
+    }
+  }
+
+  &__block {
+    margin-top: 3vmin;
+    display: flex;
+    gap: 5vmin;
+
+    @media (orientation: portrait) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 55vmin;
+
+    @media (max-aspect-ratio: 8/5) {
+      width: calc(100% - 100vmin);
+    }
+
+    @media (max-aspect-ratio: 13/10) {
+      display: none;
+    }
+
+    @media (orientation: portrait) {
+      display: block;
+      width: 85vmin;
+    }
+  }
+
+  &__question {
+    width: 90vmin;
+  }
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 2vmin;
+  
+  &__text {
+    border: .4vmin solid white;
+    border-radius: 2vmin;
+    overflow: hidden;
+    background-color: white;
+  }
+
+  &__top {
+    background-color: #06D0A0;
+    font-family: "Pixeloid", serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vmin;
+    font-size: 2.5vmin;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    padding: 1vmin 2vmin;
+  }
+
+  &__number {
+    background-color: #10203A;
+    color: white;
+    border-radius: 2vmin;
+    padding: 1vmin;
+  }
+
+  &__que {
+    color: #102039;
+    padding: 3vmin;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vmin;
+
+    p {
+      font-size: 2.5vmin;
+    }
+  }
+
+  &__vars {
+    display: flex;
+    flex-direction: column;
+    gap: 2vmin;
+  }
+
+}
+
+.answer {
+  display: flex;
+  gap: 10vmin;
+  width: 100%;
+
+  &__digit-border {
+    width: 12vmin;
+    height: 12vmin;
+    border: .2vmin solid white;
+    border-radius: 2vmin;
+    background-color: #503DA0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 200ms background-color ease-in-out;
+  }
+
+  &__digit {
+    display: block;
+    background-color: #10203A;
+    width: 8vmin;
+    height: 8vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Pixeloid", serif;
+    line-height: 1;
+    border-radius: 1.2vmin;
+    font-size: 5vmin;
+  }
+
+  &__text {
+    position: relative;
+    border: .2vmin solid white;
+    border-radius: 2vmin;
+    background-color: #503DA0;
+    min-height: 12vmin;
+    width: calc(100% - 10vmin - 12vmin);
+    display: flex;
+    align-items: center;
+    padding: 0 4vmin;
+    text-align: left;
+    font-size: 2.5vmin;
+    transition: 200ms background-color ease-in-out;
+
+    &--fssmall {
+      font-size: 2.2vmin;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -8vmin;
+      background-color: white;
+      width: 6vmin;
+      height: 0.3vmin;
+    }
+  }
+
+  &:hover .answer__digit-border,
+  &:focus .answer__digit-border {
+    background-color: #9161F2;
+  }
+
+  &:active .answer__digit-border {
+    background-color: #8353E3;
+  }
+
+  &:hover .answer__text,
+  &:focus .answer__text {
+    background-color: #9161F2;
+  }
+
+  &:active .answer__text {
+    background-color: #8353E3;
+  }
+
+  &.correct .answer__digit-border {
+    background-color: #06D0A0;
+  }
+
+  &.correct .answer__text {
+    background-color: #06D0A0;
+  }
+
+  &.incorrect .answer__digit-border {
+    background-color: #F36845;
+  }
+
+  &.incorrect .answer__text {
+    background-color: #F36845;
+  }
+
+}
+
+
+.que4 {  
+  .question__que {
+    padding: 2vmin;
+  }
+
+  .question__que p {
+    font-size: 2.2vmin;
+  }
+
+  .answer__digit-border {
+    width: 10vmin;
+    height: 10vmin;
+  }
+
+  .answer__digit {
+    width: 6.5vmin;
+    height: 6.5vmin;
+    font-size: 4vmin;
+  }
+
+  .answer__text {
+    min-height: 10vmin;
+    font-size: 2.2vmin;
+  }
+}
+
+.smaller-header {
+  .game__header {
+    font-size: 3.5vmin;
+  }
+}
+
+.colored {
+  fill: #8353E3;
+}
+  

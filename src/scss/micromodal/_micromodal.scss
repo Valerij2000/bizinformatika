@@ -1,0 +1,186 @@
+.modal {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+}
+
+.modal__overlay {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__container {
+  width: 70vmin;
+  min-height: 65vmin;
+  border: .4vmin solid white;
+  border-radius: 3vmin;
+  overflow: hidden;
+  background-color: white;
+
+}
+
+.modal__head {
+  height: 8vmin;
+  background-color: #06d0a0;
+
+}
+
+.modal__close {
+  outline: none;
+  position: absolute;
+  top: 1.5vmin;
+  right: 1.5vmin;
+  width: 5vmin;
+  height: 5vmin;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease 0s;
+  background-color: #10203A;
+  border-radius: 1vmin;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  
+  &::after, &::before {
+    content: "";
+    position: absolute;
+    width: 4.8vmin;  
+    height: 0.3vmin;
+    background-color: white;
+  }
+  
+  &::after {
+    transform: rotate(45deg);
+    top: 2.2vmin;
+    left: 0;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+    top: 2.2vmin;
+    left: 0;
+  }
+}
+
+.modal__content {
+  width: 100%;
+  height: calc(100% - 8vmin);
+  padding: 5vmin;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.modal__ico {
+  width: 7vmin;
+}
+
+.modal__header {
+  font-family: "Pixeloid", serif;
+  line-height: 1;
+  font-size: 4vmin;
+  text-transform: uppercase;
+  margin-top: 3vmin;
+}
+
+.header-correct {
+  color: #06D0A0;
+}
+
+.header-incorrect {
+  color: #F36845;
+}
+
+// .modal__button {
+//   // margin-bottom: 4vmin;
+// }
+
+.modal__message {
+  // height: 30vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/**************************\
+    Demo Animation Style
+  \**************************/
+@keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes mmslideIn {
+  from {
+    transform: translateY(15%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes mmslideOut {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-10%);
+  }
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: transform;
+}

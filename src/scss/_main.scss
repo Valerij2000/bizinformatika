@@ -1,0 +1,52 @@
+.main {
+  flex: 1 1 auto;
+  padding: 2vmin 5vmin;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+  color: white;
+  
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  @media (orientation: portrait) {
+    background-image: url('../img/mobile@2x.jpg');
+  }
+}
+
+.startback {
+  @media (orientation: landscape) {
+    background-image: url('../img/back-start@2x.jpg');
+  }
+
+  @media (orientation: portrait) {
+    justify-content: start;
+    padding: 10vmin 5vmin;
+  }
+}
+
+.gameplayback {
+  @media (orientation: landscape) {
+    background-image: url('../img/back-game@2x.jpg');
+  }
+
+  @media (orientation: portrait) {
+    justify-content: start;
+    padding: 12vmin 5vmin 5vmin 5vmin;
+  }
+}
+
+.finalback {
+  @media (orientation: landscape) {
+    background-image: url('../img/back-final@2x.jpg');
+  }
+
+  @media (orientation: portrait) {
+    justify-content: start;
+    padding: 12vmin 5vmin 5vmin 5vmin;
+  }
+}
