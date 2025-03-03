@@ -1,20 +1,26 @@
-const main = new Audio('./sounds/maintheme.mp3');
+import mainthemeUrl from '/sounds/maintheme.mp3';
+import buttonUrl from '/sounds/button.mp3';
+import correctUrl from '/sounds/correct.mp3';
+import incorrectUrl from '/sounds/incorrect.mp3';
+import winUrl from '/sounds/win.mp3';
+
+const main = new Audio(mainthemeUrl);
 main.volume = 0.2;
 main.load();
 
-const button = new Audio('./sounds/button.mp3');
+const button = new Audio(buttonUrl);
 button.volume = .8;
 button.load();
 
-const correct = new Audio('./sounds/correct.mp3');
+const correct = new Audio(correctUrl);
 correct.volume = .6;
 correct.load();
 
-const incorrect = new Audio('./sounds/incorrect.mp3');
+const incorrect = new Audio(incorrectUrl);
 incorrect.volume = .8;
 incorrect.load();
 
-const win = new Audio('./sounds/win.mp3');
+const win = new Audio(winUrl);
 win.volume = 0.8;
 win.load();
 
