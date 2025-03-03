@@ -3,11 +3,6 @@ import { modals } from './modals';
 import { gameplay } from './gameplay';
 import { changeBackground } from './utils';
 import { sounds } from '../sounds';
-import { choosePlayerOneAnalitics, choosePlayerTwoAnalitics } from '../analitics';
-
-
-
-
 
 export function startgame() {
 
@@ -52,12 +47,10 @@ function playerBtnHandler(e) {
 
   if (btn.id==='player1') {
     window.appState.player = 0;
-    choosePlayerOneAnalitics();
   }
 
   if (btn.id==='player2') {
     window.appState.player = 1;
-    choosePlayerTwoAnalitics();
   }
 
   gameplay();

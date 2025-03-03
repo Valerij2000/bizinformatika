@@ -16,6 +16,7 @@
     position: absolute;
     font-family: "Pixeloid",
       serif;
+    font-size: 2.5vmin;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,9 +31,13 @@
     background-position: center;
     animation: slide 1s ease-in-out infinite;
 
+    @include respond(mobile) {
+      font-size: 3vmin;
+    }
+
     @media (orientation: portrait) {
       left: 0;
-      top: -20vmin;
+      top: -14vmin;
       width: 30vmin;
       height: 12vmin;
     }
@@ -95,7 +100,7 @@
     max-width: 80vmin;
 
     @include respond(mobile) {
-      font-size: 3.5vmin;
+      font-size: 3.8vmin;
     }
   }
 
@@ -121,11 +126,11 @@
 
   @media (orientation: portrait) {
     flex-direction: column;
-    gap: 0.5vmax;
+    gap: 1vmax;
   }
 
   @media (max-aspect-ratio: 8/10) {
-    font-size: 2vmin;
+    font-size: 2.8vmin;
   }
 
 
@@ -162,7 +167,7 @@
 
     a:hover,
     a:focus {
-      color: #06D0A0;
+      color: var(--green);
     }
 
     a:active {
@@ -181,13 +186,18 @@
       font-family: "Pixeloid",
         serif;
       font-size: 3vmax;
+
+      @include respond(mobile) {
+        font-size: 4vmax;
+        line-height: 1;
+      }
     }
 
     p {
       font-size: 1.3vmax;
 
       @include respond(mobile) {
-        font-size: 2vmax;
+        font-size: 2.2vmax;
       }
     }
 
