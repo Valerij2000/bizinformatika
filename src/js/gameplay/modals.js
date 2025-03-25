@@ -68,10 +68,10 @@ export function modals() {
 
   function modalErrorHandler() {
     MicroModal.close("modal-error");
-    
     if (!window.appState.muted) {
       sounds.button.play();
     }
+    gameplay();
   }
 
 }

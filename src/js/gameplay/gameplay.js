@@ -47,25 +47,25 @@ function answerBtnHandler(e) {
 
 
     if (!window.appState.muted) {
+      sounds.incorrect.play();
+    }
+    svgColor();
+
+    PopupSuccessContent.innerHTML = data[window.appState.player][window.appState.currentScreen].popup.correct;
+    MicroModal.show("modal-success");
+    window.appState.currentScreen += 1;
+
+  } else {        
+    answer.classList.add('correct');    
+
+    if (!window.appState.muted) {
       sounds.correct.play();
     }
     svgColor();
 
-    setTimeout(() => {      
-      PopupSuccessContent.innerHTML = data[window.appState.player][window.appState.currentScreen].popup.correct;
-      MicroModal.show("modal-success");
-      window.appState.currentScreen += 1;
-    }, 900);
-
-
-  } else {
-
-    answer.classList.add('correct');
-    if (!window.appState.muted) {
-      sounds.correct.play();
-    }
     popupErrorContent.innerHTML = data[window.appState.player][window.appState.currentScreen].popup.incorrect;
     MicroModal.show("modal-error");
+    window.appState.currentScreen += 1;    
   }
 }
 
