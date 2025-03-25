@@ -60,9 +60,9 @@ function answerBtnHandler(e) {
 
   } else {
 
-    answer.classList.add('incorrect');
+    answer.classList.add('correct');
     if (!window.appState.muted) {
-      sounds.incorrect.play();
+      sounds.correct.play();
     }
     popupErrorContent.innerHTML = data[window.appState.player][window.appState.currentScreen].popup.incorrect;
     MicroModal.show("modal-error");

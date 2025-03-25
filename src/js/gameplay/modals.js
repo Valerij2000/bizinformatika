@@ -6,6 +6,12 @@ MicroModal.init();
 // MicroModal.show("modal-success");
 // MicroModal.show("modal-error");
 
+// <img class="modal__ico" src="./img/ico-incorrect.svg" alt="Неправильно">
+// <h3 class="modal__header header-incorrect">Неверно!</h3>
+
+// <img class="modal__ico" src="./img/ico-correct.svg" alt="Правильно">
+// <h3 class="modal__header header-correct">Верно!</h3>
+
 
 export function modals() {
   const html = document.querySelector('body');
@@ -16,9 +22,7 @@ export function modals() {
 				<div class="modal__head">
 					<div class="modal__close error"></div>
 				</div>
-				<div class="modal__content">
-					<img class="modal__ico" src="./img/ico-incorrect.svg" alt="Неправильно">
-					<h3 class="modal__header header-incorrect">Неверно!</h3>
+				<div class="modal__content">					
 					<div class="popupErrorContent modal__message"></div>
 					<button class="modal__button btn green-btn error">Понятно</button>
 				</div>
@@ -32,15 +36,10 @@ export function modals() {
 				<div class="modal__head">
 					<div class="modal__close success"></div>
 				</div>
-
 				<div class="modal__content">
-					<img class="modal__ico" src="./img/ico-correct.svg" alt="Правильно">
-					<h3 class="modal__header header-correct">Верно!</h3>
 					<div class="PopupSuccessContent modal__message"></div>
 					<button class="modal__button btn green-btn success">Понятно</button>
-					
 				</div>
-				
 			</div>
 		</div>
 	</div>
