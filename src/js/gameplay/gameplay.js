@@ -16,7 +16,7 @@ export function gameplay() {
     // console.log('win!');
     changeBackground('gameplayback', 'finalback');
     mainSection.innerHTML = finalScreen;
-    final();
+    final(window.appState.player);
     if (!window.appState.muted) {
       sounds.win.play();
     }

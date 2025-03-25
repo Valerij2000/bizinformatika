@@ -3,7 +3,7 @@ import { changeBackground } from './utils';
 import { startgame } from './startgame';
 import { sounds } from '../sounds';
 
-export function final() {
+export function final(player) {
   const mainSection = document.querySelector('.main'); 
 
   const downloadBtn = document.querySelector('#downloadDoc');
@@ -12,8 +12,13 @@ export function final() {
   downloadBtn.addEventListener('click', (e) => {
     e.preventDefault();
     const link = document.createElement('a');
-    link.href = './docs/A5.pdf';
-    link.download = 'gastro.pdf';
+    if (player === 0) {
+      link.href = './docs/innovation.pdf';
+      link.download = 'innovation.pdf';
+    } else {
+      link.href = './docs/business.pdf';
+      link.download = 'business.pdf';
+    }   
     link.click(); 
     if (!window.appState.muted) {
       sounds.button.play();
