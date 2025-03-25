@@ -10,6 +10,12 @@ export function startgame() {
     player: 0,
     currentScreen: 0,
     muted: false,
+    counts: {
+      A: 0,
+      B: 0,
+      C: 0,
+      D: 0
+    }
   }
 
   modals();

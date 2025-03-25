@@ -1,6 +1,7 @@
 import { gameScreen } from '../templates/gameScreen';
 import { finalScreen } from '../templates/finalScreen';
 import { changeBackground } from './utils';
+import { handleClickTracker } from './quizTracker';
 import { data } from '../bd';
 import { final } from './final';
 import { sounds } from '../sounds';
@@ -34,17 +35,18 @@ function answerBtnHandler(e) {
   const popupErrorContent = document.querySelector('.popupErrorContent');
   const PopupSuccessContent = document.querySelector('.PopupSuccessContent');
 
-
   e.preventDefault();
   
   const answer = e.target.closest('.answer');
   clearAnswers();
 
+  handleClickTracker(answer.id);  
+  // console.log(window.appState.counts);
+
   if (answer.id == data[window.appState.player][window.appState.currentScreen].correct) {    
     answer.classList.add('correct');
     // block
     disableAnswers();
-
 
     if (!window.appState.muted) {
       sounds.incorrect.play();

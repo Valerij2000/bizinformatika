@@ -1,4 +1,5 @@
 import { startScreen } from '../templates/startScreen';
+import { updateFinalResult } from './quizTracker';
 import { changeBackground } from './utils';
 import { startgame } from './startgame';
 import { sounds } from '../sounds';
@@ -8,6 +9,8 @@ export function final(player) {
 
   const downloadBtn = document.querySelector('#downloadDoc');
   const startAgainBtn = document.querySelector('#startgame');
+
+  updateFinalResult(player);
 
   downloadBtn.addEventListener('click', (e) => {
     e.preventDefault();
