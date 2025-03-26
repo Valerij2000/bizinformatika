@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+:root {
+  --comfortaa: 'Comfortaa', cursive;
+
+  --dark: #1c1c1c;
+  --light: #c4c4c4;
+  --teal: #008080;
+  --redlight: #d54e4ee8;
+}
+
+.typewriter {
+  margin: 3.5vmin 2.5vmin;
+  font-size: 4.5vmin;
+  color: var(--light);
+  font-family: var(--comfortaa);
+
+}
+
+.typed-text {
+  color: var(--redlight);
+  font-family: var(--comfortaa);
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  margin-left: 4px;
+  background: var(--teal);
+}
+
+.cursor.blink {
+  animation: blink 0.8s ease-in-out infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    background: var(--teal);
+  }
+
+  40%,
+  50% {
+    background: transparent;
+  }
+}

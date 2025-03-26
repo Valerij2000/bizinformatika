@@ -1,7 +1,7 @@
 import { playerScreen } from '../templates/playerScreen';
 import { modals } from './modals';
 import { gameplay } from './gameplay';
-import { changeBackground } from './utils';
+import { changeBackground, typewriter } from './utils';
 import { sounds } from '../sounds';
 
 export function startgame() {
@@ -19,6 +19,7 @@ export function startgame() {
   }
 
   modals();
+  typewriter();
   const startbtn = document.querySelector('#start-btn');
   startbtn.addEventListener('click', startbtnHandler, {once: true});
 

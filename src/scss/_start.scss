@@ -76,6 +76,12 @@
     position: relative;
     margin-bottom: 2vmin;
 
+    @media (orientation: portrait) {
+      max-width: 80vmin;
+      font-size: 7vmin;
+      line-height: 1.5;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -100,12 +106,18 @@
     max-width: 80vmin;
 
     @include respond(mobile) {
-      font-size: 3.8vmin;
+      font-size: 4.5vmin;
     }
   }
 
   &__btn {
-    margin-top: 4vmin;
+    margin-top: 5.5vmin;
+
+    @media (orientation: portrait) {
+      width: 50vmin;
+      height: 11vmin;
+      font-size: 4.5vmin;
+    }
   }
 
 }

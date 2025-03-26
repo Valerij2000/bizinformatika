@@ -272,9 +272,13 @@
   }
 }
 
+.game__header {
+  text-align: right;
+}
+
 .smaller-header {
   .game__header {
-    font-size: 3.5vmin;
+    font-size: 3.4vmin;
   }
 }
 

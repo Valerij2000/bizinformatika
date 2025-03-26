@@ -12,6 +12,7 @@ export const startScreen = `
     <button class="btn green-btn start__btn" id="start-btn">
       Начать игру
     </button>
+    <p class="typewriter"><span class="typed-text"></span><span class="cursor blink">&nbsp;</span></p>
   </div>
   <div class="bottom">
     <div class="social-bar">
