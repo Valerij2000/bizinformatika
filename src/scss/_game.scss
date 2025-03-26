@@ -53,6 +53,7 @@
     }
 
     @media (orientation: portrait) {
+      position: static;
       width: 30vmin;
       height: 5vmin;
       top: 1vmin;
