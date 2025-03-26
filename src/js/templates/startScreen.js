@@ -1,7 +1,7 @@
 export const startScreen = `
   <div class="start">
     <h2 class="main-header start__header">
-      Твое будущее <span class="nowrap">в IT</span> начинается здесь
+      Твое будущее IT начинается здесь
     </h2>
     <div class="start__desc">
       <p class="start__text">
