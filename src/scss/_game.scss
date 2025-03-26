@@ -15,17 +15,17 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    
+
     &.muted {
       background-image: url('../img/sound-off.svg') !important;
     }
 
     @media (max-aspect-ratio: 8/5) {
-      top: -9vmin;
+      top: -2vmin;
     }
 
     @media (orientation: portrait) {
-      top: -9vmin;
+      top: -2vmin;
       left: 0;
       width: 7vmin;
       height: 7vmin;
@@ -47,7 +47,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-  
+
     @media (max-aspect-ratio: 8/5) {
       top: -9vmin;
     }
@@ -55,7 +55,7 @@
     @media (orientation: portrait) {
       width: 30vmin;
       height: 5vmin;
-      top: -7vmin;
+      top: 1vmin;
       right: 0;
     }
   }
@@ -68,6 +68,7 @@
     @media (orientation: portrait) {
       flex-direction: column-reverse;
       align-items: center;
+      margin-top: 5vmin;
     }
   }
 
@@ -85,7 +86,7 @@
 
     @media (orientation: portrait) {
       display: block;
-      width: 85vmin;
+      width: 70vmin;
     }
   }
 
@@ -98,7 +99,7 @@
   display: flex;
   flex-direction: column;
   gap: 2vmin;
-  
+
   &__text {
     border: .4vmin solid white;
     border-radius: 2vmin;
@@ -244,7 +245,7 @@
 }
 
 
-.que4 {  
+.que4 {
   .question__que {
     padding: 2vmin;
   }
@@ -279,4 +280,3 @@
 .colored {
   fill: #8353E3;
 }
-  

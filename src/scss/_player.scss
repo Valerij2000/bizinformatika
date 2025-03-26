@@ -25,16 +25,16 @@
 
     @media (orientation: portrait) {
       transform: translateY(-50%);
-      width: 10vmin;
-      height: 10vmin;
+      width: 8vmin;
+      height: 8vmin;
     }
 
   }
 
 
   &__header {
-    font-size: 5vmin;
-    
+    font-size: 4vmin;
+
     @media (orientation: landscape) {
       max-width: 120vmin;
     }
