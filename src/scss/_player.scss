@@ -66,10 +66,15 @@
     height: calc((633px * 40vmax) / 813px);
     position: relative;
     outline: none;
+    transition: transform 0.5s ease 0s;
 
     @media (orientation: portrait) {
       width: 90vmin;
       height: calc((633px * 90vmin) / 813px);
+    }
+
+    &:hover {
+      transform: scale(1.04);
     }
   }
 

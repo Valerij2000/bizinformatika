@@ -5,7 +5,7 @@ export const data = [
       title: "Когда всё идёт не по плану...",
       correctclass: '',
       description: "ВОПРОС &#8470;&nbsp;1",
-      imgurl: `./img/a1.svg`,
+      imgurl: `./img/b1.webp`,
       question: `
       <p>
         Как ты реагируешь на неожиданную проблему?
@@ -46,7 +46,7 @@ export const data = [
       title: "Название, которое изменит мир",
       correctclass: 'que4 smaller-header',
       description: "ВОПРОС &#8470;&nbsp;2",
-      imgurl: `./img/a2.svg`,
+      imgurl: `./img/b2.webp`,
       question: `
       <p>
         Представь, что ты изобрёл новый гаджет. Как его назовёшь?
@@ -85,7 +85,7 @@ export const data = [
       title: "Любишь ли ты играть с риском?",
       correctclass: 'que4',
       description: "ВОПРОС &#8470;&nbsp;3",
-      imgurl: `./img/a2.svg`,
+      imgurl: `./img/a3.webp`,
       question: `
       <p>
        Как ты относишься к риску?
@@ -125,7 +125,7 @@ export const data = [
       title: "Если бы у тебя был 1 миллиард на стартап…",
       correctclass: 'smaller-header',
       description: "ВОПРОС &#8470;&nbsp;4",
-      imgurl: `./img/a4.svg`,
+      imgurl: `./img/a4.webp`,
       question: `
       <p>
        Тебе дают миллиард долларов на стартап. Что ты сделаешь?
@@ -167,7 +167,7 @@ export const data = [
       title: "Паника или план?",
       correctclass: 'que4',
       description: "ВОПРОС &#8470;&nbsp;1",
-      imgurl: `./img/b1.svg`,
+      imgurl: `./img/b1.webp`,
       question: `
       <p>
         Что ты сделаешь, если на работе внезапно сломалась вся система?
@@ -208,7 +208,7 @@ export const data = [
       title: "Объясни бабушке, чем ты занимаешься",
       correctclass: 'que4 smaller-header',
       description: "ВОПРОС &#8470;&nbsp;2",
-      imgurl: `./img/b2.svg`,
+      imgurl: `./img/b2.webp`,
       question: `
       <p>
         Как бы ты описал специальность "Бизнес-информатика" простыми словами?
@@ -247,7 +247,7 @@ export const data = [
       title: "Как ты принимаешь решения?",
       correctclass: '',
       description: "ВОПРОС &#8470;&nbsp;3",
-      imgurl: `./img/b2.svg`,
+      imgurl: `./img/b3.webp`,
       question: `
       <p>
        Какой у тебя стиль мышления?
@@ -288,7 +288,7 @@ export const data = [
       title: "Чего ты ждёшь от работы?",
       correctclass: 'smaller-header que1',
       description: "ВОПРОС &#8470;&nbsp;4",
-      imgurl: `./img/b4.svg`,
+      imgurl: `./img/b4.webp`,
       question: `
       <p>
         Что для тебя важнее всего в профессии?

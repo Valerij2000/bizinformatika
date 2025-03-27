@@ -76,6 +76,8 @@
   &__img {
     display: block;
     width: 55vmin;
+    border-radius: 2vmin;
+    border: 0.5vmin solid white;
 
     @media (max-aspect-ratio: 8/5) {
       width: calc(100% - 100vmin);
@@ -109,7 +111,7 @@
   }
 
   &__top {
-    background-color: #06D0A0;
+    background-color: #22857dd6;
     font-family: "Pixeloid", serif;
     display: flex;
     justify-content: space-between;
@@ -123,7 +125,7 @@
   }
 
   &__number {
-    background-color: #10203A;
+    background-color: #0b5854;
     color: white;
     border-radius: 2vmin;
     padding: 1vmin;
@@ -138,6 +140,7 @@
 
     p {
       font-size: 2.5vmin;
+      font-weight: 600;
     }
   }
 
@@ -159,7 +162,7 @@
     height: 12vmin;
     border: .2vmin solid white;
     border-radius: 2vmin;
-    background-color: #503DA0;
+    background-color: rgba(34, 133, 125, 0.8392156863);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,7 +171,8 @@
 
   &__digit {
     display: block;
-    background-color: #10203A;
+    background-color: #fff;
+    color: #0b5854;
     width: 8vmin;
     height: 8vmin;
     display: flex;
@@ -184,7 +188,7 @@
     position: relative;
     border: .2vmin solid white;
     border-radius: 2vmin;
-    background-color: #503DA0;
+    background-color: #22857dd6;
     min-height: 12vmin;
     width: calc(100% - 10vmin - 12vmin);
     display: flex;
@@ -192,6 +196,7 @@
     padding: 0 4vmin;
     text-align: left;
     font-size: 2.5vmin;
+    font-weight: 600;
     transition: 200ms background-color ease-in-out;
 
     &--fssmall {
@@ -211,20 +216,20 @@
 
   &:hover .answer__digit-border,
   &:focus .answer__digit-border {
-    background-color: #9161F2;
+    background-color: #ff8e32e0;
   }
 
   &:active .answer__digit-border {
-    background-color: #8353E3;
+    background-color: #ff8e32e0;
   }
 
   &:hover .answer__text,
   &:focus .answer__text {
-    background-color: #9161F2;
+    background-color: #ff8e32e0;
   }
 
   &:active .answer__text {
-    background-color: #8353E3;
+    background-color: #ff8e32e0;
   }
 
   &.correct .answer__digit-border {
@@ -268,12 +273,14 @@
 
   .answer__text {
     min-height: 10vmin;
-    font-size: 2.2vmin;
+    font-size: 2.4vmin;
   }
 }
 
 .game__header {
-  text-align: right;
+  @media (orientation: portrait) {
+    text-align: right;
+  }
 }
 
 .smaller-header {
@@ -283,5 +290,5 @@
 }
 
 .colored {
-  fill: #8353E3;
+  fill: #ff8e32e0;
 }
