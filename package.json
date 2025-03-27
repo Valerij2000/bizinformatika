@@ -26,6 +26,7 @@
     "vite-plugin-image-optimizer": "^1.1.7"
   },
   "dependencies": {
+    "firebase": "^11.5.0",
     "micromodal": "^0.4.10",
     "resize-observer-polyfill": "^1.5.1"
   }
