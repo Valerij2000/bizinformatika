@@ -8,15 +8,25 @@
   <title>Админ панель</title>
   
   <link rel="preload" href="./assets/pixeloid_sans_bold-72b7354b.woff2" as="font" type="font/woff" crossorigin="anonymous">
-  <script type="module" crossorigin src="./assets/admin-6bc759fd.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/app-69f66b8d.js">
-  <link rel="stylesheet" href="./assets/app-7ae65a55.css">
+  <script type="module" crossorigin src="./assets/admin-81070fcb.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/app-0563283b.js">
+  <link rel="stylesheet" href="./assets/app-92b6b7da.css">
 </head>
 
 <body>
   <div class="admin" id="app">
-    <h1>Админка - Ответы пользователей</h1>
-    <div id="user-answers"></div>
+    <form id="admin-form" class="admin-form" action="#">
+      <h1>Вход в админ панель</h1>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" id="auth-btn">Войти</button>
+    </form>
   </div>
 </body>
 
