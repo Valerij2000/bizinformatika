@@ -12,8 +12,18 @@
 
 <body>
   <div class="admin" id="app">
-    <h1>Админка - Ответы пользователей</h1>
-    <div id="user-answers"></div>
+    <form id="admin-form" class="admin-form" action="#">
+      <h1>Вход в админ панель</h1>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" id="auth-btn">Войти</button>
+    </form>
   </div>
 </body>
 

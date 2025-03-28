@@ -16,7 +16,7 @@ const firebaseConfig = {
 
 // Инициализация Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore();
+const db = getFirestore(app);
 const analytics = getAnalytics(app);
 
 const userCategoryMapping = {
