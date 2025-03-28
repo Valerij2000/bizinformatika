@@ -25,7 +25,7 @@ const userCategoryMapping = {
 };
 
 // Функция для сохранения ответов
-export async function saveQuizAnswers(userId, answers, maxCategory) {
+async function saveQuizAnswers(userId, answers, maxCategory) {
   try {
     // Получаем название категории в зависимости от userId
     const categoryName = userCategoryMapping[userId] || "Неизвестная категория";
@@ -45,5 +45,4 @@ export async function saveQuizAnswers(userId, answers, maxCategory) {
   }
 }
 
-// Сохранение данных
-// saveQuizAnswers(userId, userAnswers);
+export { saveQuizAnswers, firebaseConfig };
