@@ -1,6 +1,8 @@
 import '../scss/style.scss';
 
+import { preloadImages } from './preload';
 import { startgame } from './gameplay/startgame';
 
-
-startgame();
+preloadImages((loadedImages) => {
+  startgame();
+});

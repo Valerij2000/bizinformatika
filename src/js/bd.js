@@ -3,7 +3,7 @@ export const data = [
   [
     {
       title: "Когда всё идёт не по плану...",
-      correctclass: '',
+      correctclass: 'smaller-header',
       description: "ВОПРОС &#8470;&nbsp;1",
       imgurl: `./img/b1.webp`,
       question: `

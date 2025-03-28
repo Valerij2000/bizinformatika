@@ -1,7 +1,7 @@
 export const startScreen = `
   <div class="start">
     <h2 class="main-header start__header">
-      Твое будущее IT начинается здесь
+      Твое будущее в IT начинается здесь
     </h2>
     <div class="start__desc">
       <p class="start__text">
@@ -16,11 +16,11 @@ export const startScreen = `
   </div>
   <div class="bottom">
     <div class="social-bar">
-      <a href="#" class="social-link" target="_blank">
-        <img src="/img/tg.png" alt="">
+      <a href="https://t.me/voity_v_IT_2025" class="social-link" target="_blank">
+        <img src="/public/img/tg.png" alt="">
       </a>
       <a href="https://vk.com/business_inform_donnu" class="social-link" target="_blank">
-        <img src="/img/vk.png" alt="">
+        <img src="/public/img/vk.png" alt="">
       </a>
     </div>
     <div class="bottom__desc2">

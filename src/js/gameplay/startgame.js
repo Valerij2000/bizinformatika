@@ -3,7 +3,6 @@ import { modals } from './modals';
 import { gameplay } from './gameplay';
 import { changeBackground, typewriter } from './utils';
 import { sounds } from '../sounds';
-import { saveQuizAnswers } from '../firebase/app';
 
 export function startgame() {
 
