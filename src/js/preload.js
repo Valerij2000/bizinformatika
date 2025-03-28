@@ -1,13 +1,13 @@
 const images = [
-  "/img/a3.webp",
-  "/img/a4.webp",
-  "/img/b1.webp",
-  "/img/b2.webp",
-  "/img/b3.webp",
-  "/img/b4.webp",
-  "/img/final-earth.png",
-  "/img/player_1.png",
-  "/img/player_2.png",
+  "img/a3.webp",
+  "img/a4.webp",
+  "img/b1.webp",
+  "img/b2.webp",
+  "img/b3.webp",
+  "img/b4.webp",
+  "img/final-earth.png",
+  "img/player_1.png",
+  "img/player_2.png",
 ];
 
 function showError(errorMessage, src) {
