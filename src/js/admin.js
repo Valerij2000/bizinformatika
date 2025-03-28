@@ -55,15 +55,22 @@ function displayUserAnswers(answers) {
     return;
   }
 
-  appContainer.innerHTML = '<div id="user-answers"></div>';
+  appContainer.innerHTML = `
+    <div id="user-answers" class="user-answers-container">
+      <h1>Ответы пользователей</h1>
+    </div>
+  `;
   const container = document.getElementById('user-answers');
 
   answers.forEach(answer => {
     const answerElement = document.createElement('div');
+    answerElement.classList.add('answer-card');
     answerElement.innerHTML = `
-      <h2>Пользователь: ${answer.userId}</h2>
-      <p>Результаты: ${JSON.stringify(answer.answers)}</p>
-      <p>Итоговая категория: ${answer.maxCategory}</p>
+      <h2 class="answer-user">Пользователь: ${answer.userId}</h2>
+      <div class="answer-details">
+        <p><strong>Результаты:</strong> ${JSON.stringify(answer.answers)}</p>
+        <p><strong>Итоговая категория:</strong> ${answer.maxCategory}</p>
+      </div>
     `;
     container.appendChild(answerElement);
   });
