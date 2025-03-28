@@ -1,3 +1,5 @@
+import { saveQuizAnswers } from "../firebase/app";
+
 const idToCategory = {
   0: "A",
   1: "B",
@@ -38,6 +40,8 @@ function updateFinalResult(player) {
 
   document.getElementById("quiz-result").textContent = resultText[maxCategory];
   document.getElementById("quiz-disclaimer").textContent = disclaimerText;
+
+  saveQuizAnswers(window.appState.player, window.appState.counts, maxCategory);
 }
 
 export {

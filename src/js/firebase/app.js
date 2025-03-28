@@ -1,3 +1,4 @@
+import { generateUserId } from "./userId";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
@@ -18,18 +19,27 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 const analytics = getAnalytics(app);
 
+const userCategoryMapping = {
+  0: "Инноватика",
+  1: "Бизнес-Информатика"
+};
+
 // Функция для сохранения ответов
-export async function saveQuizAnswers(userId, answers) {
+export async function saveQuizAnswers(userId, answers, maxCategory) {
   try {
+    // Получаем название категории в зависимости от userId
+    const categoryName = userCategoryMapping[userId] || "Неизвестная категория";
+
     // Добавление документа в коллекцию "quiz_answers"
     const docRef = await addDoc(collection(db, "quiz_answers"), {
-      userId: userId,
+      userId: generateUserId(),
+      category: categoryName,
       answers: answers,
-      timestamp: new Date() // добавляем временную метку
+      maxCategory: maxCategory,
+      timestamp: new Date()
     });
-
-    // Выводим ID документа в консоль, чтобы знать, что всё прошло успешно
-    console.log("Ответы успешно сохранены в Firestore. ID документа:", docRef.id);
+    
+    // console.log("Ответы успешно сохранены в Firestore. ID документа:", docRef.id);
   } catch (error) {
     console.error("Ошибка при сохранении ответов: ", error);
   }
