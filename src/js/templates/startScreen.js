@@ -17,10 +17,10 @@ export const startScreen = `
   <div class="bottom">
     <div class="social-bar">
       <a href="https://t.me/voity_v_IT_2025" class="social-link" target="_blank">
-        <img src="/public/img/tg.png" alt="">
+        <img src="./img/tg.png" alt="">
       </a>
       <a href="https://vk.com/business_inform_donnu" class="social-link" target="_blank">
-        <img src="/public/img/vk.png" alt="">
+        <img src="./img/vk.png" alt="">
       </a>
     </div>
     <div class="bottom__desc2">
