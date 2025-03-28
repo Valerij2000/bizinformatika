@@ -15,7 +15,7 @@ const firebaseConfig = {
 
 // Инициализация Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const db = getFirestore();
 const analytics = getAnalytics(app);
 
 // Функция для сохранения ответов
