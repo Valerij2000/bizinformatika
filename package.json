@@ -26,6 +26,7 @@
     "vite-plugin-image-optimizer": "^1.1.7"
   },
   "dependencies": {
+    "chart.js": "^4.4.8",
     "disable-devtool": "^0.3.8",
     "firebase": "^11.5.0",
     "micromodal": "^0.4.10",

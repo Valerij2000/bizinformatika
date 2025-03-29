@@ -105,6 +105,11 @@
   line-height: 1.4;
 }
 
+#specialtyChart {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
 @media (max-width: 768px) {
   .user-answers-container {
     padding: 10px;

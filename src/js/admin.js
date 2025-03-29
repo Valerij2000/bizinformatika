@@ -4,6 +4,10 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import { firebaseConfig } from './firebase/app.js';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { Chart, BarController, BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend } from 'chart.js';
+
+// Регистрация компонентов Chart.js
+Chart.register(BarController, BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend);
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -58,6 +62,7 @@ function displayUserAnswers(answers) {
   appContainer.innerHTML = `
     <div id="user-answers" class="user-answers-container">
       <h1>Ответы пользователей</h1>
+      <canvas id="specialtyChart" width="400" height="200"></canvas>
     </div>
   `;
   const container = document.getElementById('user-answers');
@@ -75,6 +80,49 @@ function displayUserAnswers(answers) {
       </div>
     `;
     container.appendChild(answerElement);
+  });
+
+  // Render chart
+  renderSpecialtyChart(answers);
+}
+
+function renderSpecialtyChart(answers) {
+  const specialtyCounts = {
+    "Инноватика": 0,
+    "Бизнес-Информатика": 0,
+  };
+
+  answers.forEach(answer => {
+    if (specialtyCounts[answer.category] !== undefined) {
+      specialtyCounts[answer.category]++;
+    }
+  });
+
+  const ctx = document.getElementById('specialtyChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: Object.keys(specialtyCounts),
+      datasets: [{
+        label: 'Количество пользователей',
+        data: Object.values(specialtyCounts),
+        backgroundColor: ['#4CAF50', '#007BFF'],
+        borderColor: ['#388E3C', '#0056b3'],
+        borderWidth: 1,
+      }],
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: true,
+          text: 'Распределение пользователей по специальностям',
+        },
+      },
+    },
   });
 }
 
