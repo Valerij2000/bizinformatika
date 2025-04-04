@@ -4,7 +4,7 @@ import DisableDevtool from 'disable-devtool';
 import { preloadImages } from './preload';
 import { startgame } from './gameplay/startgame';
 
-preloadImages((loadedImages) => {
+preloadImages((loadedImages) => {  
   startgame();
 });
 
