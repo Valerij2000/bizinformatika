@@ -15,7 +15,8 @@ export function startgame() {
       B: 0,
       C: 0,
       D: 0
-    }
+    },
+    telegramJoined: false
   }
 
   modals();

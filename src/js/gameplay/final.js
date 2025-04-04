@@ -3,14 +3,30 @@ import { updateFinalResult } from './quizTracker';
 import { changeBackground } from './utils';
 import { startgame } from './startgame';
 import { sounds } from '../sounds';
+import MicroModal from 'micromodal';
 
 export function final(player) {
   const mainSection = document.querySelector('.main'); 
 
   const downloadBtn = document.querySelector('#downloadDoc');
   const startAgainBtn = document.querySelector('#startgame');
+  const telegramBtn = document.querySelector('#telegramBtn');
 
   updateFinalResult(player);
+
+  let modalTimer;
+  if (!window.appState.telegramJoined) {
+    modalTimer = setTimeout(() => {
+      MicroModal.show('modal-winner');
+    }, 5000);
+  }
+
+  if (telegramBtn) {
+    telegramBtn.addEventListener('click', () => {
+      window.appState.telegramJoined = true;
+      clearTimeout(modalTimer);
+    });
+  }
 
   downloadBtn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -30,6 +46,7 @@ export function final(player) {
 
   startAgainBtn.addEventListener('click', (e) => {
     e.preventDefault();
+    clearTimeout(modalTimer);
     mainSection.innerHTML = startScreen;
     changeBackground('finalback', 'startback');
     if (!window.appState.muted) {

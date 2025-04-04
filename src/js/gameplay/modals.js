@@ -5,6 +5,7 @@ import { sounds } from '../sounds';
 MicroModal.init();
 // MicroModal.show("modal-success");
 // MicroModal.show("modal-error");
+// MicroModal.show("modal-winner");
 
 // <img class="modal__ico" src="./img/ico-incorrect.svg" alt="Неправильно">
 // <h3 class="modal__header header-incorrect">Неверно!</h3>
@@ -43,10 +44,41 @@ export function modals() {
 			</div>
 		</div>
 	</div>
+
+  <div class="modal micromodal-slide" id="modal-winner" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1">
+      <div class="modal__container">
+        <div class="modal__head">
+          <div class="modal__close winner"></div>
+        </div>
+        <div class="modal__content">
+          <div class="modal__message">
+            <h2 class="modal__header">Ты почти чемпион!</h2>
+            <p class="modal__text">
+              🎁 Уже в Telegram? Там чек-лист, советы и 🔑 закрытые инсайды по поступлению в IT
+            </p>
+            <ul class="modal__list">
+              <li class="w60">🔑 Секретные материалы по поступлению</li>
+              <li class="w40">🎁 Подарок - чек-лист "5 шагов к успеху в IT"</li>
+              <li class="w60">💬 Эксклюзивные советы от студентов</li>
+              <li class="w60">🚀 Инсайды от практикующих разработчиков</li>
+            </ul>
+            <div class="modal__buttons">
+              <a href="https://t.me/voity_v_IT_2025" target="_blank" class="btn orange-btn pulse">
+                Забрать чек-лист
+              </a>
+              <button class="modal__button btn green-btn winner">Вернусь позже</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   `;
 
   const modalsSuccess = document.querySelectorAll('.success');  
   const modalsError = document.querySelectorAll('.error');
+  const modalsWinner = document.querySelectorAll('.winner');
 
   // modalsSuccess.forEach(success => success.removeEventListener('click', modalSuccessHandler));
   // modalsError.forEach(error => error.removeEventListener('click', modalErrorHandler));
@@ -56,6 +88,7 @@ export function modals() {
 
   modalsSuccess.forEach(success => success.addEventListener('click', modalSuccessHandler));
   modalsError.forEach(error => error.addEventListener('click', modalErrorHandler));
+  modalsWinner.forEach(winner => winner.addEventListener('click', modalWinnerHandler));
 
   function modalSuccessHandler() {        
     MicroModal.close("modal-success");
@@ -72,6 +105,13 @@ export function modals() {
       sounds.button.play();
     }
     gameplay();
+  }
+
+  function modalWinnerHandler() {
+    MicroModal.close("modal-winner");
+    if (!window.appState.muted) {
+      sounds.button.play();
+    }
   }
 
 }

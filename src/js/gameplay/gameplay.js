@@ -21,7 +21,6 @@ export function gameplay() {
     if (!window.appState.muted) {
       sounds.win.play();
     }
-
   } else {
     // отрисовываем экран
     mainSection.innerHTML = gameScreen(window.appState.player, window.appState.currentScreen);
