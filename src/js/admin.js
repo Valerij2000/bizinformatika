@@ -74,7 +74,7 @@ function displayUserAnswers(answers) {
       <h2 class="answer-user">Пользователь: ${answer.userId}</h2>
       <div class="answer-details">
         <p><strong>Результаты:</strong> ${JSON.stringify(answer.answers)}</p>
-        <p><strong>Специальность:</strong> ${answer.category}</p>
+        <p><strong>Программа:</strong> ${answer.category}</p>
         <p><strong>Итоговая категория:</strong> ${answer.maxCategory}</p>
         <p><strong>Дата:</strong> ${new Date(answer.timestamp.seconds * 1000)}</p>
       </div>

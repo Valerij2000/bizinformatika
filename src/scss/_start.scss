@@ -22,7 +22,7 @@
     align-items: center;
     padding-bottom: 2vmin;
     top: -6vmin;
-    left: -15vmin;
+    left: -21vmin;
     width: 24vmin;
     height: 10vmin;
     background-image: url('../img/start-decor-top@2x.png');
@@ -94,7 +94,7 @@
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 3vmin;
     line-height: 145%;
-    max-width: 80vmin;
+    max-width: 65vmin;
 
     @include respond(mobile) {
       font-size: 4.5vmin;
