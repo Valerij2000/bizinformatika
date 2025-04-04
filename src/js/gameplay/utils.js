@@ -9,6 +9,8 @@ export function typewriter() {
   const typedText = document.querySelector(".typed-text");
   const cursor = document.querySelector(".cursor");
 
+  if (!typedText || !cursor) return;
+
   const textArray = ["00101101110001001", "typedText.textContent = 0", "Web Development", "Business", "Innovations"];
 
   let textArrayIndex = 0;
