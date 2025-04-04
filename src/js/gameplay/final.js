@@ -18,7 +18,7 @@ export function final(player) {
   if (!window.appState.telegramJoined) {
     modalTimer = setTimeout(() => {
       MicroModal.show('modal-winner');
-    }, 5000);
+    }, 12000);
   }
 
   if (telegramBtn) {
