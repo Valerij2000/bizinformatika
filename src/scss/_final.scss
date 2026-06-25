@@ -100,5 +100,16 @@
     position: absolute;
     left: 3%;
     bottom: 2%;
+
+    a,
+    button {
+      width: 4.5%;
+      height: 4.5%;
+
+      @include respond(mobile) {
+        width: 10%;
+        height: 10%;
+      }
+    }
   }
 }

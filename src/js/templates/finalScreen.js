@@ -23,6 +23,7 @@ export const finalScreen = `
         <img src="./img/vk.png" alt="Группа ВКонтакте кафедры">
       </a>
       <button class="button-ai social-link">
+        <span class="tooltip-badge">NEW</span>
         <img src="./img/ai.png" alt="Персональный Ai помощник">
       </button>
     </div>

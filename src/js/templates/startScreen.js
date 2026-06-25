@@ -25,6 +25,7 @@ export const startScreen = `
         <img src="./img/vk.png" alt="">
       </a>
       <button class="button-ai social-link">
+        <span class="tooltip-badge">NEW</span>
         <img src="./img/ai.png" alt="Персональный Ai помощник">
       </button>
     </div>
