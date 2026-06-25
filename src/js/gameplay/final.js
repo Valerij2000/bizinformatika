@@ -3,6 +3,7 @@ import { updateFinalResult } from './quizTracker';
 import { changeBackground } from './utils';
 import { startgame } from './startgame';
 import { sounds } from '../sounds';
+import { initAi } from './utils';
 import MicroModal from 'micromodal';
 
 export function final(player) {
@@ -48,6 +49,7 @@ export function final(player) {
     e.preventDefault();
     clearTimeout(modalTimer);
     mainSection.innerHTML = startScreen;
+    initAi();
     changeBackground('finalback', 'startback');
     if (!window.appState.muted) {
       sounds.button.play();

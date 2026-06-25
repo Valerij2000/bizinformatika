@@ -6,6 +6,7 @@ MicroModal.init();
 // MicroModal.show("modal-success");
 // MicroModal.show("modal-error");
 // MicroModal.show("modal-winner");
+// MicroModal.show("modal-ai");
 
 // <img class="modal__ico" src="./img/ico-incorrect.svg" alt="Неправильно">
 // <h3 class="modal__header header-incorrect">Неверно!</h3>
@@ -74,21 +75,37 @@ export function modals() {
       </div>
     </div>
   </div>
+
+  <div class="modal micromodal-slide" id="modal-ai" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1">
+			<div class="modal__container">
+				<div class="modal__head">
+					<div class="modal__close ai"></div>
+				</div>
+				<div class="modal__content">
+					<iframe class="modal-ai" src="https://www.chatbase.co/chatbot-iframe/LkSoXOrBZdlR67cW0C6aV" width="100%"
+			    frameborder="0" allow="microphone"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
   `;
 
   const modalsSuccess = document.querySelectorAll('.success');  
   const modalsError = document.querySelectorAll('.error');
   const modalsWinner = document.querySelectorAll('.winner');
+  const modalsAi = document.querySelectorAll('.ai');
 
   // modalsSuccess.forEach(success => success.removeEventListener('click', modalSuccessHandler));
   // modalsError.forEach(error => error.removeEventListener('click', modalErrorHandler));
 
 
-// getEventListeners
+  // getEventListeners
 
   modalsSuccess.forEach(success => success.addEventListener('click', modalSuccessHandler));
   modalsError.forEach(error => error.addEventListener('click', modalErrorHandler));
   modalsWinner.forEach(winner => winner.addEventListener('click', modalWinnerHandler));
+  modalsAi.forEach(ai => ai.addEventListener('click', modalAiHandler));
 
   function modalSuccessHandler() {        
     MicroModal.close("modal-success");
@@ -109,6 +126,13 @@ export function modals() {
 
   function modalWinnerHandler() {
     MicroModal.close("modal-winner");
+    if (!window.appState.muted) {
+      sounds.button.play();
+    }
+  }
+
+  function modalAiHandler() {
+    MicroModal.close("modal-ai");
     if (!window.appState.muted) {
       sounds.button.play();
     }

@@ -46,3 +46,12 @@ export function typewriter() {
 
   type();
 }
+
+export function initAi() {
+  const aiButtons = document.querySelectorAll('.button-ai');
+  aiButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      MicroModal.show("modal-ai");
+    })
+  })
+}

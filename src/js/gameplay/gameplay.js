@@ -5,7 +5,7 @@ import { handleClickTracker } from './quizTracker';
 import { data } from '../bd';
 import { final } from './final';
 import { sounds } from '../sounds';
-
+import { initAi } from './utils';
 
 
 export function gameplay() {
@@ -17,6 +17,7 @@ export function gameplay() {
     // console.log('win!');
     changeBackground('gameplayback', 'finalback');
     mainSection.innerHTML = finalScreen;
+    initAi();
     final(window.appState.player);
     if (!window.appState.muted) {
       sounds.win.play();

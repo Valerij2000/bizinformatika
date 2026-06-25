@@ -114,6 +114,20 @@
   align-items: center;
 }
 
+#modal-ai {
+  .modal__container {
+    width: 100%;
+  }
+
+  .modal__content {
+    padding: 0;
+  }
+
+  .modal__head {
+    background: #38aba1e3;
+  }
+}
+
 /**************************\
     Demo Animation Style
   \**************************/

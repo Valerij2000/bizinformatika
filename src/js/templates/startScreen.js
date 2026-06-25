@@ -24,6 +24,9 @@ export const startScreen = `
       <a href="https://vk.com/business_inform_donnu" class="social-link" target="_blank">
         <img src="./img/vk.png" alt="">
       </a>
+      <button class="button-ai social-link">
+        <img src="./img/ai.png" alt="Персональный Ai помощник">
+      </button>
     </div>
     <div class="bottom__desc2">
       <div class="bottom__address">
