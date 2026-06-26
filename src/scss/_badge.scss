@@ -1,0 +1,85 @@
+// .tooltip-badge {
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   height: 18px;
+//   padding: 0 6px;
+
+//   border-radius: 999px;
+
+//   background: linear-gradient(135deg,
+//       #8b5cf6,
+//       #6366f1);
+
+//   color: #fff;
+
+//   font-size: 10px;
+//   font-weight: 700;
+//   letter-spacing: 0.08em;
+//   text-transform: uppercase;
+
+//   white-space: nowrap;
+
+//   box-shadow:
+//     0 2px 8px rgba(99, 102, 241, 0.25);
+
+//   user-select: none;
+//   pointer-events: none;
+// }
+
+.tooltip-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 18px;
+  padding: 0 6px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg,
+      #8b5cf6,
+      #6366f1);
+
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  box-shadow:
+    0 2px 8px rgba(99, 102, 241, 0.25);
+
+  user-select: none;
+  pointer-events: none;
+
+  animation: badge-attention 2.2s ease-in-out infinite;
+}
+
+@keyframes badge-attention {
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  15% {
+    transform: translateY(-3px) scale(1.04);
+  }
+
+  30% {
+    transform: translateY(0) scale(1);
+  }
+
+  45% {
+    transform: translateY(-1px) scale(1.02);
+  }
+
+  60% {
+    transform: translateY(0) scale(1);
+  }
+}
