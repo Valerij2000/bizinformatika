@@ -29,12 +29,14 @@
 // }
 
 .tooltip-badge {
+  font-family: "Pixeloid",
+    serif;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  height: 18px;
-  padding: 0 6px;
+  height: 4vmin;
+  padding: 0 1.5vmin;
 
   border-radius: 999px;
 
@@ -44,7 +46,7 @@
 
   color: #fff;
 
-  font-size: 10px;
+  font-size: 3vmin;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -58,6 +60,11 @@
   pointer-events: none;
 
   animation: badge-attention 2.2s ease-in-out infinite;
+}
+
+.tooltip-badge-btn {
+  position: relative;
+  left: 2vmin;
 }
 
 @keyframes badge-attention {

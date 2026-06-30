@@ -24,6 +24,9 @@ export const startScreen = `
       <a href="https://vk.com/business_inform_donnu" class="social-link" target="_blank">
         <img src="./img/vk.png" alt="">
       </a>
+      <a href="https://max.ru/join/eVtSiMV90WfLATEW9Pp2oUfq0IwjNkMqRDDZ3HnrdAU" class="social-link" target="_blank">
+        <img src="./img/max.svg" alt="Канал кафедры в MAX">
+      </a>
       <button class="button-ai social-link">
         <span class="tooltip-badge">NEW</span>
         <img src="./img/ai.png" alt="Персональный Ai помощник">

@@ -11,9 +11,10 @@ export const finalScreen = `
     </div>
     <div class="final__btns">
       <button id="startgame" class="btn green-btn">Вернуться в&nbsp;начало</button>     
-      <a id="maxBtn" href="https://max.ru/join/eVtSiMV90WfLATEW9Pp2oUfq0IwjNkMqRDDZ3HnrdAU" target="_blank" class="btn orange-btn">
-        Перейти в MAX
-      </a>
+      <button class="btn button-ai orange-btn">
+        <span class="tooltip-badge tooltip-badge-btn">NEW</span>        
+        Личный AI-консультант
+      </button>
     </div>
     <div class="social-bar">
       <a href="https://t.me/voity_v_IT_2025" class="social-link" target="_blank">
@@ -22,13 +23,19 @@ export const finalScreen = `
       <a href="https://vk.com/business_inform_donnu" class="social-link" target="_blank">
         <img src="./img/vk.png" alt="Группа ВКонтакте кафедры">
       </a>
-      <button class="button-ai social-link">
-        <span class="tooltip-badge">NEW</span>
-        <img src="./img/ai.png" alt="Персональный Ai помощник">
-      </button>
+      <a href="https://max.ru/join/eVtSiMV90WfLATEW9Pp2oUfq0IwjNkMqRDDZ3HnrdAU" class="social-link" target="_blank">
+        <img src="./img/max.svg" alt="Канал кафедры в MAX">
+      </a>      
     </div>
     <button class="btn final__btn" id="downloadDoc">
       Скачать памятку <img class="final__tg" src="./img/download-ico.png" alt="">
     </button>
   </div>
+`;
+
+const ai = `
+<button class="button-ai social-link">
+  <span class="tooltip-badge">NEW</span>
+  <img src="./img/ai.png" alt="Персональный Ai помощник">
+</button>
 `;
